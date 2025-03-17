@@ -9,6 +9,7 @@ import Register from './pages/Register';
 
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
+// context
 import { AuthProvider } from './context/AuthContext';
 
 createRoot(document.getElementById('root')).render(
