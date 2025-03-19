@@ -6,7 +6,7 @@ const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const { auth } = useAuthentication();
-  const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -17,7 +17,7 @@ export function AuthProvider({ children }) {
   }, [auth]);
 
   // While user undefined
-  if (user === undefined) {
+  if (user === null) {
     return (
       <div style={styles.loadingContainer}>
         <h2>Carregando...</h2>

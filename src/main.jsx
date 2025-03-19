@@ -11,6 +11,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 // context
 import { AuthProvider } from './context/AuthContext';
+import CreatePost from './pages/CreatePost/index.jsx';
+import Dashboard from './pages/Dashboard/index.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -22,6 +24,8 @@ createRoot(document.getElementById('root')).render(
             <Route path='/about' element={<About />} />
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
+            <Route path='/posts/create' element={<CreatePost />} />
+            <Route path='/dashboard' element={<Dashboard />} />
           </Route>
         </Routes>
       </BrowserRouter>
