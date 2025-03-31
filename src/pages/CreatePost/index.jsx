@@ -50,8 +50,10 @@ const CreatePost = () => {
     })
 
     // Redirect to home page
-    navigate('/');
-
+    if(!response.error) {
+      navigate('/');
+    }
+    
   }
 
   return (

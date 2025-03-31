@@ -9,8 +9,6 @@ const Navbar = () => {
   const { user } = useAuthValue();
   const { logout } = useAuthentication();
 
-  console.log(user);
-
   return (
     <nav className={styles.navbar}>
       <NavLink to='/' className={styles.brand}> Mini <span>Blog </span></NavLink>
