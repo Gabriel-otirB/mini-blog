@@ -16,6 +16,7 @@ import { AuthProvider } from './context/AuthContext';
 import CreatePost from './pages/CreatePost/index.jsx';
 import Dashboard from './pages/Dashboard/index.jsx';
 import { ProtectedRoute, GuestRoute } from './components/ProtectedRoute'; // Importe as rotas protegidas
+import Post from './pages/Post';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,9 +24,11 @@ createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<App />}>
+
             <Route index element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/search' element={<Search />} />
+            <Route path='/posts/:id' element={<Post />} />
 
             <Route
               path='/login'
@@ -68,6 +71,7 @@ createRoot(document.getElementById('root')).render(
               }
             />
           </Route>
+
         </Routes>
       </BrowserRouter>
     </AuthProvider>
