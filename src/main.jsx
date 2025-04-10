@@ -17,6 +17,7 @@ import CreatePost from './pages/CreatePost/index.jsx';
 import Dashboard from './pages/Dashboard/index.jsx';
 import { ProtectedRoute, GuestRoute } from './components/ProtectedRoute'; // Importe as rotas protegidas
 import Post from './pages/Post';
+import EditPost from './pages/EditPost';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -51,6 +52,14 @@ createRoot(document.getElementById('root')).render(
               element={
                 <ProtectedRoute redirectTo="/login">
                   <CreatePost />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path='/posts/edit/:id'
+              element={
+                <ProtectedRoute redirectTo="/login">
+                  <EditPost />
                 </ProtectedRoute>
               }
             />
